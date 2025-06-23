@@ -1,10 +1,10 @@
 import React from 'react'
 import Navbar from './Navbar/Navbar'
 
-const Layout = ({children}) => {
+const Layout = ({rooms, children}) => {
   return (
     <>
-    <Navbar/>
+    {rooms.length > 0 ? <Navbar/> : null}
     {children}
     </>
   )

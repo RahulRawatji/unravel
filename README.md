@@ -1,12 +1,114 @@
-# React + Vite
+# Rapunzel Unravel
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React application with Vite, designed for high performance and maintainability.
 
-Currently, two official plugins are available:
+## Project Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Prerequisites
 
-## Expanding the ESLint configuration
+- Node.js (v18+ recommended)
+- npm (v9+ recommended)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Installation
+
+```bash
+npm install
+```
+
+### Development
+
+Start the development server with hot reloading:
+
+```bash
+npm run dev
+```
+
+### Build
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+### Preview
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+### Linting
+
+Check code quality using ESLint:
+
+```bash
+npm run lint
+```
+
+---
+
+## Project Structure
+
+```
+public/                # Static assets and sample data
+  sampleData/
+    sampleData.json
+src/
+  api/                 # API utilities (e.g., fetchRoomData.jsx)
+  assets/              # Static assets (e.g., images, SVGs)
+  components/          # React components
+    common/            # Shared/common components
+      Loading/         # Loading spinner and styles
+      Variants/        # UI variants
+    Layout/            # Layout and navigation
+    Room/              # Room-related UI
+    RoomsContainer/    # Container for room lists
+  context/             # React context (currently empty)
+  App.jsx              # Main app component
+  main.jsx             # Entry point
+  App.css, index.css   # Global styles
+eslint.config.js       # ESLint configuration
+vite.config.js         # Vite configuration
+index.html             # HTML template
+```
+
+---
+
+## Architecture
+
+- **React 19**: Functional components and hooks for state management and side effects.
+- **Component-based**: UI is split into reusable, isolated components for maintainability.
+- **Vite**: Fast development server and optimized production builds.
+- **ESLint**: Enforces code quality and consistency.
+- **Public/sampleData**: Used for local development and testing with mock data.
+
+---
+
+## Performance Optimization Strategies
+
+- **Vite**: Ultra-fast hot module replacement and optimized builds.
+- **Code Splitting**: Vite and React automatically split code for faster load times.
+- **Component Memoization**: Use of `React.memo` and hooks to prevent unnecessary re-renders (apply as needed).
+- **Static Assets**: Served from the `public` directory for efficient caching.
+- **Efficient Data Fetching**: API utilities are separated for easier optimization and caching.
+- **CSS Optimization**: Scoped and modular CSS to reduce style recalculation and improve maintainability.
+
+---
+
+## Contributing
+
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/your-feature`)
+3. Commit your changes
+4. Push to the branch (`git push origin feature/your-feature`)
+5. Open a pull request
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
