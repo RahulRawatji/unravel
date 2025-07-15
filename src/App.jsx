@@ -4,6 +4,9 @@ import RoomsContainer from './components/RoomsContainer/RoomsContainer';
 import Loading from './components/common/Loading/Loading';
 import { RoomDataProvider, useRoomData } from './context/RoomDataContext';
 
+console.log("ENV_PROD",import.meta.env.PROD)
+console.log(import.meta.env.DEV)
+
 function AppContent() {
   const { rooms } = useRoomData();
   // Only show <Loading /> if rooms.length === 0
